@@ -1,6 +1,38 @@
-<ion-toolbar>
-  <ion-title>carrinho</ion-title>
-</ion-toolbar>
-
 <ion-content>
+  <ion-grid [ngClass]="products && products.length < 1 ? 'grid-full' : ''">
+    <ion-row *ngIf="products.length">
+      <ion-col class="total">
+        <h4 class="product-price">Total: <span> R$ {{total}}</span></h4>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <div class="products" *ngFor="let product of products">
+        <ion-col *ngIf="products.length">
+          <div class="product">
+            <div class="img-product">
+              <ion-img src="{{product.image}}"></ion-img>
+            </div>
+            <div class="info-product">
+              <div class="name">
+                <h3 class="product-title">{{product.name}}</h3>
+                <span class="product-info">{{product.offer}}</span>
+              </div>
+              <span class="product-description">{{product.detail}}</span>
+              <span class="product-info">{{product.hero}}</span>
+              <span class="product-info">{{product.info}}</span>
+              <h4 class="product-price">R$ {{product.price}}</h4>
+            </div>
+
+            <div class="remove-from-cart">
+              <ion-button (click)="removeFromCart(product)" expand="full" color="danger">Remover
+                <ion-icon name="trash-outline" class="ion-margin-start"></ion-icon></ion-button>
+            </div>
+          </div>
+        </ion-col>
+      </div>
+      <ion-col size="12" class="empty-list" *ngIf="products.length < 1">
+        <p>O carrinho está vazio</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

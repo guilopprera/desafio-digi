@@ -1,7 +1,3 @@
-ion-grid .test {
-
-}
-
 ion-grid {
   ion-row {
     ion-col {
@@ -52,10 +48,6 @@ ion-grid {
             display: block;
             margin: 10px 0;
           }
-
-          .product-price {
-            // margin: 10px 0;
-          }
         }
 
         .add-to-cart {
@@ -68,5 +60,11 @@ ion-grid {
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  ion-grid ion-row {
+    padding: 0 20px;
   }
 }

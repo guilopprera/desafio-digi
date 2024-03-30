@@ -34,11 +34,12 @@ ion-header {
     }
 
     .cart {
+      margin-right: 10px;
+
       .cart-icon {
         color: #fff;
         width: 40px;
         height: 40px;
-        // margin-right: 100px;
       }
     }
   }
@@ -46,7 +47,6 @@ ion-header {
 
 @media only screen and (min-width: 768px) {
   .cart {
-    margin-right: 100px;
+    margin-right: 100px !important;
   }
 }
-

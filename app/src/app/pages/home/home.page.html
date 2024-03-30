@@ -1,32 +1,30 @@
 <ion-content>
   <ion-grid>
-    <div class="test">
       <ion-row>
-        <div class="products" *ngFor="let produto of listaProdutos">
+        <div class="products" *ngFor="let product of productList">
           <ion-col>
             <div class="product">
               <div class="img-product">
-                <ion-img src="{{produto.image}}"></ion-img>
+                <ion-img src="{{product.image}}"></ion-img>
               </div>
               <div class="info-product">
                 <div class="name">
-                  <h3 class="product-title">{{produto.name}}</h3>
-                  <span class="product-info">{{produto.offer}}</span>
+                  <h3 class="product-title">{{product.name}}</h3>
+                  <span class="product-info">{{product.offer}}</span>
                 </div>
-                <span class="product-description">{{produto.detail}}</span>
-                <span class="product-info">{{produto.hero}}</span>
-                <span class="product-info">{{produto.info}}</span>
-                <h4 class="product-price">R$ {{produto.price}}</h4>
+                <span class="product-description">{{product.detail}}</span>
+                <span class="product-info">{{product.hero}}</span>
+                <span class="product-info">{{product.info}}</span>
+                <h4 class="product-price">R$ {{product.price}}</h4>
               </div>
 
               <div class="add-to-cart">
-                <ion-button (click)="addToCart()" expand="full" color="danger">Comprar
+                <ion-button (click)="addToCart(product)" expand="full" color="danger">Comprar
                   <ion-icon name="cart-outline" class="ion-margin-start"></ion-icon></ion-button>
               </div>
             </div>
           </ion-col>
         </div>
       </ion-row>
-    </div>
   </ion-grid>
 </ion-content>

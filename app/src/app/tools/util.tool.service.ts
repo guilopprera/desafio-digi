@@ -36,17 +36,11 @@ export class UtilToolService {
     UtilToolService.ListaLoadings = loadingsFilter;
   }
 
-  public async ToastInfoTop(msg: string, duration: number = 3000): Promise<void> {
-    const toast = await this.Toast(msg, "toast-info", duration);
-    await toast.present();
-  }
-
-  private async Toast(msg: string, cssClass: string, duration: number): Promise<HTMLIonToastElement> {
+  public async Toast(msg: string): Promise<HTMLIonToastElement> {
     return await this.toastCtrl.create({
       message: msg,
-      cssClass: `toast-custom ${cssClass}`,
-      duration: duration,
-      position: 'top'
+      duration: 500,
+      position: 'bottom'
     });
   }
 }

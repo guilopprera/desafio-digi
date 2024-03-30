@@ -8,7 +8,9 @@
         <ion-searchbar placeholder="Pesquisar"></ion-searchbar>
       </div>
       <ion-buttons slot="end" class="cart">
-        <ion-icon slot="icon-only" class="cart-icon" name="cart-outline" routerLink="/carrinho"></ion-icon>
+        <ion-icon slot="icon-only" class="cart-icon" name="cart-outline" routerLink="/carrinho">
+        </ion-icon>
+        <ion-badge color="danger">{{productsQtd}}</ion-badge>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
