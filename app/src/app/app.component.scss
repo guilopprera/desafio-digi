@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+ion-searchbar {
+  color: #000;
+  --background: #fff;
+}
+
+ion-header {
+  ion-toolbar {
+    --background: #fe0048;
+    display: flex;
+
+    ion-buttons {
+      cursor: pointer;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    ion-searchbar {
+      max-width: 50vw;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cart {
+      .cart-icon {
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        // margin-right: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .cart {
+    margin-right: 100px;
+  }
+}
+

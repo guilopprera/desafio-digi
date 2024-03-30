@@ -1,0 +1,32 @@
+<ion-content>
+  <ion-grid>
+    <div class="test">
+      <ion-row>
+        <div class="products" *ngFor="let produto of listaProdutos">
+          <ion-col>
+            <div class="product">
+              <div class="img-product">
+                <ion-img src="{{produto.image}}"></ion-img>
+              </div>
+              <div class="info-product">
+                <div class="name">
+                  <h3 class="product-title">{{produto.name}}</h3>
+                  <span class="product-info">{{produto.offer}}</span>
+                </div>
+                <span class="product-description">{{produto.detail}}</span>
+                <span class="product-info">{{produto.hero}}</span>
+                <span class="product-info">{{produto.info}}</span>
+                <h4 class="product-price">R$ {{produto.price}}</h4>
+              </div>
+
+              <div class="add-to-cart">
+                <ion-button (click)="addToCart()" expand="full" color="danger">Comprar
+                  <ion-icon name="cart-outline" class="ion-margin-start"></ion-icon></ion-button>
+              </div>
+            </div>
+          </ion-col>
+        </div>
+      </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>

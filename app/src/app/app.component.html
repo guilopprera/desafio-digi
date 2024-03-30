@@ -1,0 +1,19 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-img class="logo" src="../assets/imgs/somosdigi_logo.jpg" routerLink="/home"></ion-img>
+      </ion-buttons>
+      <div class="div-searchbar">
+        <ion-searchbar placeholder="Pesquisar"></ion-searchbar>
+      </div>
+      <ion-buttons slot="end" class="cart">
+        <ion-icon slot="icon-only" class="cart-icon" name="cart-outline" routerLink="/carrinho"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
+</ion-app>

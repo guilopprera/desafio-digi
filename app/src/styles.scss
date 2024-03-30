@@ -1,0 +1,19 @@
+ion-item {
+  --background: #fff;
+  --color: #000;
+}
+
+ion-label,
+span,
+p,
+h2,
+h3,
+h4,
+h5 {
+  color: #000;
+  --color: #000;
+}
+
+ion-router-outlet {
+  background: #fafafb;
+}
