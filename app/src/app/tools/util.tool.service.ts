@@ -37,10 +37,14 @@ export class UtilToolService {
   }
 
   public async Toast(msg: string): Promise<HTMLIonToastElement> {
-    return await this.toastCtrl.create({
+    const toast = await this.toastCtrl.create({
       message: msg,
       duration: 500,
       position: 'bottom'
     });
+
+    await toast.present();
+
+    return toast;
   }
 }
